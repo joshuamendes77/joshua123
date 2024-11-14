@@ -1,0 +1,176 @@
+/* General Reset and Base Styles */
+*{
+  font-family: 'Poppins';
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins';
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Light and Dark Mode Styles */
+body.light-mode {
+  background-color: #f8f9fa;
+  color: #343a40;
+}
+
+body.dark-mode {
+  background-color: #343a40;
+  color: #f8f9fa;
+}
+
+/* Navbar Styles */
+.navbar {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+.navbar-light-mode {
+  background-color: #f8f9fa;
+}
+
+.navbar-dark-mode {
+  background-color: #343a40;
+}
+
+.nav-link {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #343a40 !important;
+  transition: color 0.3s;
+}
+
+.navbar-dark-mode .nav-link {
+  color: #000000 !important;
+}
+
+.nav-link:hover {
+  color: #007bff !important;
+}
+
+/* About Section */
+#about {
+  padding: 60px 0;
+  background-color: #e9ecef;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+#about h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+#about p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+/* Card Hover Effects */
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Achievements & Hobbies Sections */
+#achievements, #hobbies {
+  padding: 40px 0;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+/* Carousel Styles */
+.carousel-item img {
+  filter: brightness(80%);
+  transition: filter 0.5s, transform 0.5s;
+}
+
+.carousel-item img:hover {
+  filter: brightness(100%);
+  transform: scale(1.05);
+}
+
+/* Contact Form Styles */
+#contact {
+  padding: 60px 0;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+#contact form {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contact .form-control {
+  border-radius: 0;
+  transition: border-color 0.3s;
+}
+
+#contact .form-control:focus {
+  border-color: #007bff;
+  box-shadow: none;
+}
+
+/* Theme Toggle Button */
+#themeToggle {
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#themeToggle:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #343a40;
+  color: #f8f9fa;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Smooth Scrolling for Anchor Links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  #about h1 {
+      font-size: 2rem;
+  }
+
+  .nav-link {
+      font-size: 1rem;
+  }
+}
