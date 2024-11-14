@@ -1,0 +1,259 @@
+/* General Styling */
+*{
+  scroll-behavior: smooth;
+}
+
+.portfolio {
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.light {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.dark {
+  background-color: #1c1c1c;
+  color: #f5f5f5;
+}
+
+/* Navbar Styling */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #282c34;
+  padding: 10px 20px;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-link, .dropdown-button {
+  color: #61dafb;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.3s;
+  font-weight: bold;
+}
+
+.nav-link:hover, .dropdown-button:hover {
+  color: #21a1f1;
+  transform: scale(1.1);
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  border-radius: 5px;
+  padding: 10px;
+  top: 100%;
+  left: 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-link {
+  color: #61dafb;
+  padding: 5px 10px;
+  display: block;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.dropdown-link:hover {
+  color: #21a1f1;
+}
+
+/* About Section */
+/* About Section */
+.about-container {
+  display: flex;
+  align-items: center;
+  padding: 60px 20px;
+  gap: 30px;
+  background-color: #f0f0f0; /* Light background for contrast */
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+
+.about-container:hover {
+  transform: scale(1.02);
+}
+
+.about-text {
+  flex: 1;
+  text-align: left;
+  padding: 20px;
+  animation: fadeIn 1s ease;
+}
+
+.about-text .title {
+  font-size: 2.5rem; /* Larger heading */
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+  position: relative;
+}
+
+.about-text .title::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50px;
+  height: 4px;
+  background-color: #61dafb;
+  border-radius: 2px;
+}
+
+.about-text .description {
+  font-size: 1.2rem; /* Larger paragraph text */
+  line-height: 1.6;
+  color: #555;
+}
+
+.about-image {
+  flex: 1;
+  text-align: center;
+  animation: slideIn 1s ease;
+}
+
+.profile-img {
+  max-width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  border: 3px solid #61dafb;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+  border-color: #21a1f1;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Achievements & Hobbies */
+.section-title {
+  text-align: center;
+  margin: 40px 0 20px;
+  font-size: 2rem;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.card {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* Contact Form */
+.form-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.input, .textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+.input:focus, .textarea:focus {
+  border-color: #61dafb;
+}
+
+.button {
+  background-color: #61dafb;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+  background-color: #21a1f1;
+  transform: scale(1.05);
+}
